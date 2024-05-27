@@ -1,0 +1,595 @@
+:root{
+    --color-principal: #fff8f1;
+    --color-secundario: #e0be9a;
+    --color-terciario: #5b4d43;
+    --color-extra: #a2672d;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+
+body{
+    background-color: var(--color-principal);
+}
+
+/* -- HEADER SECTION -- */
+
+.header{
+    width: 100%;
+    height: auto;
+    background-color: var(--color-principal);
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header__container{
+    width: 100%;
+    max-width: 1700px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__title__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    text-decoration: none;
+    color: var(--color-texto);
+}
+
+.header__title__link img{
+    width: 70px;
+}
+
+.header__title__link h1{
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.header__nav__list{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.header__nav__item a{
+    padding: 20px;
+    text-decoration: none;
+    color: var(--color-texto);
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: background-color .3s ease-in-out, border-radius .3s ease-in-out;
+}
+
+.header__nav__item a:hover{
+    background-color: var(--color-secundario);
+    border-radius: 20px;
+}
+
+/* -- HEADER SECTION END -- */
+
+
+/* -- MAIN SECTION -- */
+
+.main{
+    width: 100%;
+    height: auto;
+}
+
+.main__container{
+    max-width: 1500px;
+    margin: auto;
+    height: auto;
+}
+
+/* >> PROGRAMA RECORRIDO SECTION <<*/
+.programa__recorrido{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.programa__recorrido__info{
+    width: 50%;
+    height: 100%;
+    background-color: var(--color-terciario);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    row-gap: 30px;
+}
+
+.programa__recorrido__info h3{
+    font-size: 1.5em;
+    font-weight: 300;
+    color: var(--color-principal);
+}
+
+.programa__recorrido__info h2{
+    font-size: 3em;
+    width: 400px;
+    margin: 0 auto;
+    text-wrap: balance;
+    font-weight: 400;
+    color: var(--color-principal);
+}
+
+.programa__recorrido__info p{
+    font-size: 1em;
+    color: var(--color-principal);
+    font-weight: 300;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.programa__recorrido__info a{
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--color-principal);
+    border: 1px solid var(--color-principal);
+    width: 150px;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 10px;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+}
+
+.programa__recorrido__info a:hover{
+    background-color: var(--color-principal);
+    color: var(--color-terciario);
+}
+
+.programa__recorrido__img{
+    width: 50%;
+    height: 100%;
+}
+
+.programa__recorrido__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* >> PROGRAMA RECORRIDO END <<*/
+
+/* >> ACERCA DE SECTION <<*/
+.acerca__de{
+    width: 100%;
+    height: 400px;
+    scroll-behavior: smooth;
+}
+
+.acerca__de__info{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 30px;
+}
+
+.acerca__de__info h2{
+    font-size: 4em;
+    font-weight: 300;
+    color: var(--color-terciario);
+}
+
+.acerca__de__info p{
+    max-width: 700px;
+    font-size: 1em;
+    line-height: 25px;
+    color: var(--color-terciario);
+    text-wrap: pretty;
+}
+/* >> ACERCA DE END <<*/
+
+/* >> SERVICIOS SECTION <<*/
+.servicios{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+    margin-bottom: 80px;
+    scroll-behavior: smooth;
+}
+
+.servicios h2{
+    font-size: 4em;
+    font-weight: 300;
+    color: var(--color-terciario);
+}
+
+.servicios__interactive__nav{
+    width: 100%;
+    height: 90%;
+}
+
+.servicios__interactive__list{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    gap: 20px;
+    list-style: none;
+}
+
+.servicios__interactive__item{
+    position: relative;
+    transition: box-shadow .3s ease-in-out;
+}
+
+.servicios__interactive__item:hover{
+    box-shadow: 0px 0px 8px #000;
+}
+
+.servicios__interactive__item::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000a;
+}
+
+.item_1{
+    background-image: url(img/Auditorio__general.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.item_2{
+    background-image: url(img/Sala\ interactiva.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.item_3{
+    background-image: url(img/experiencia__sensorial.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.item_4{
+    background-image: url(img/sala__expositiva.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.servicios__interactive__item a{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-decoration: none;
+    color: var(--color-principal);
+    text-align: center;
+}
+
+.servicio__interactive__info{
+    display: none;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.servicio__interactive__info h3{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.servicio__interactive__info p{
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 25px;
+    text-wrap: pretty;
+}
+
+.servicios__contacto__button{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicios__contacto__button a{
+    width: 200px;
+    padding: 15px;
+    margin: auto;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-principal);
+    border-radius: 15px;
+    border: 2px solid #000;
+}
+
+.servicios__contacto__button a:hover{
+    background-color: var(--color-principal);
+    color: #000;
+    border: 2px solid #000;
+}
+/* >> SERVICIOS END <<*/
+
+/* >> GALERY SECTION <<*/
+.galery{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 50px;
+    margin-bottom: 50px;
+    scroll-behavior: smooth;
+}
+.galery__info{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.galery__info h2{
+    font-size: 4em;
+    font-weight: 300;
+    color: var(--color-terciario);
+}
+
+.galery__info h3{
+    font-size: 1.5em;
+    font-weight: 400;
+    color: var(--color-terciario);
+}
+
+.galery__info p{
+    font-size: 1em;
+    color: var(--color-terciario);
+    font-weight: 400;
+    width: 1000px;
+    margin: 0 auto;
+    text-wrap: pretty;
+    line-height: 25px;
+}
+
+.galery__list{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.galery__item{
+    transition: box-shadow .3s ease-in-out;
+    cursor: pointer;
+}
+
+.galery__item:hover{
+    box-shadow: 0px 0px 10px #0009;
+}
+
+.galery__item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* >> GALERY END <<*/
+
+/* >> CONTACTO SECTION <<*/
+.contacto{
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+    scroll-behavior: smooth;
+}
+
+.contacto h2{
+    font-size: 4em;
+    font-weight: 300;
+    color: var(--color-terciario);
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.contacto__container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.form__info h3{
+    font-size: 1.5em;
+    font-weight: 500;
+    color: var(--color-terciario);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.form__input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 50px;
+    margin-bottom: 30px;
+}
+
+.form__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    row-gap: 10px;
+}
+
+.form__item label, .form__textarea label{
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--color-terciario);
+}
+
+.form__item input, .form__textarea textarea{
+    width: 250px;
+    padding: 10px;
+    outline: none;
+    background-color: var(--color-principal);
+    border: 1px solid #000;
+}
+
+.form__item span, .form__textarea span{
+    color: red;
+}
+
+.form__textarea label, .form__textarea textarea, .form__textarea input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form__textarea textarea{
+    width: 100%;
+    height: 100px;
+    resize: none;
+}
+
+.form__textarea input{
+    padding: 15px 50px;
+    background-color: #000;
+    font-size: 1em;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+
+.form__textarea input[type="submit"]:hover{
+    background-color: var(--color-principal);
+    border: 2px solid #000;
+    color: #000;
+}
+
+.extras{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    row-gap: 30px;
+}
+
+.extras__direccion{
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.extras__direccion a{
+    text-decoration: none;
+    color: #000;
+}
+
+.extras__form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    row-gap: 10px;
+}
+
+.extras__form form h3{
+    font-size: 2em;
+    font-weight: 500;
+    color: var(--color-terciario);
+    text-align: center;
+}
+
+.extras__form form label{
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--color-terciario);
+}
+
+.extras__form form input[type="email"]{
+    width: 300px;
+    padding: 10px;
+    outline: none;
+    background-color: var(--color-principal);
+    border: 1px solid #000;
+}
+
+.extras__form form input[type="submit"]{
+    padding: 15px 50px;
+    background-color: #000;
+    font-size: 1em;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+
+.extras__form form input[type="submit"]:hover{
+    background-color: var(--color-principal);
+    border: 2px solid #000;
+    color: #000;
+}
+
+/* >> CONTACTO END <<*/
+
+/* -- MAIN SECTION END-- */
+
+/* -- FOOTER SECTION-- */
+.footer{
+    background-color: var(--color-extra);
+    padding: 30px;
+}
+
+.footer__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.footer__container a, .footer__container p{
+    text-decoration: none;
+    color: var(--color-principal);
+    font-size: 1.2em;
+}
+/* -- FOOTER END-- */
